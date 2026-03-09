@@ -7,8 +7,8 @@ Advanced
 │  ├─ Quiet Boot → Disabled
 │  ├─ Bootup NumLock State → On
 │  ├─ Option ROM Messages → Force BIOS
-│  ├─ Wait For "F1" If Error → Enabled
-│  ├─ Re-try Boot → EFI Boot
+│  ├─ Wait For "F1" If Error → Disabled
+│  ├─ Re-try Boot → Disabled
 │  ├─ Watch Dog Function → Disabled
 │  ├─ AC Loss Polify Depends on → Last State
 │  ├─ Power Button Function → 4 Second Override
@@ -25,20 +25,20 @@ Advanced
 │  ├─ Active Processor Cores → All
 │  ├─ Hyper-threading → Enabled
 │  ├─ AES → Enabled
-│  ├─ Boot Performance Mode → Power Saving
+│  ├─ Boot Performance Mode → Max Non-Turbo Performance
+│  ├─ Intel SpeedStep → Enabled
 │  ├─ Intel Speed Shift Technology → Enabled
 │  ├─ Turbo Mode → Enabled
 │  ├─ Package Power Limit MSR Lock → Disabled
 │  ├─ Power Limit 1 Override → Disabled
 │  ├─ Power Limit 2 Override → Disabled
-│  ├─ Power Limit 2 → 0
 │  ├─ 1-Core Ratio Limit Override → 49
 │  ├─ 2-Core Ratio Limit Override → 48
 │  ├─ 3-Core Ratio Limit Override → 48
 │  ├─ 4-Core Ratio Limit Override → 47
 │  ├─ 5-Core Ratio Limit Override → 47
 │  ├─ 6-Core Ratio Limit Override → 46
-│  ├─ C-States → Disabled
+│  ├─ C-States → Enabled
 │  └─ Monitor/Mwait → Enabled
 │
 ├─ Chipset Configuration
@@ -57,7 +57,7 @@ Advanced
 │  │  │  ├─ Internal Graphics → Enabled
 │  │  │  ├─ GTT Size → 8MB
 │  │  │  ├─ Aperture Size → 256MB
-│  │  │  ├─ DVMT Pre-Allocated → 32MB
+│  │  │  ├─ DVMT Pre-Allocated → 64MB
 │  │  │  ├─ DVMT Total Gfx Mem → 256MB
 │  │  │  ├─ VDD Enable → Enabled
 │  │  │  ├─ PM Support → Enabled
@@ -67,7 +67,7 @@ Advanced
 │  │  │  └─ Skip CD Clock Init in S3 resume → Disabled
 │  │  │
 │  │  ├─ DMI/OPI Configuration
-│  │  │  ├─ DMI Link ASPM Control → L0sL1
+│  │  │  ├─ DMI Link ASPM Control → L1
 │  │  │  ├─ DMI Extended Sync Control → Disabled
 │  │  │  └─ DMI De-Emphasis Control → -3.5 dB
 │  │  │
@@ -81,7 +81,7 @@ Advanced
 │  │  │  ├─ CPU Slot4 PCI-E 3.0 x8(IN X16) = Not Present
 │  │  │  ├─ Slot4 Enable Root Port → Disabled
 │  │  │  ├─ Slot4 Max Link Speed → Gen3
-│  │  │  ├─ Slot4 Power Limit Value 75
+│  │  │  ├─ Slot4 Power Limit Value → 75
 │  │  │  ├─ Slot4 Limit Scale → 1.0x
 │  │  │  └─ Program PCIe ASPM after OpROM → Disabled
 │  │  │
@@ -91,31 +91,30 @@ Advanced
 │  │  |  └─ Disable Turbo GT frequency → Disabled
 │  │  |
 │  │  ├─ Vt-d → Enabled
-│  │  ├─ SW Guard Extensions (SGX) → Software Controlled
-│  │  ├─ Select Owner EPOCH input type → No Change in Owner EPOCHs
-│  │  ├─ GNA Device (B0:D8:F0) → Enabled
+│  │  ├─ SW Guard Extensions (SGX) → Disabled
+│  │  ├─ GNA Device (B0:D8:F0) → Disabled
 │  │  └─ X2APIC Opt Out → Disabled
 |  |
 │  └─ PCH-IO Configuration
 │     ├─ PCI Express Configuration
-│     │  ├─ DMI Link ASPM Control → Auto
+│     │  ├─ DMI Link ASPM Control → L1
 │     │  ├─ Peer Memory Write Enable → Disabled
 │     │  ├─ PCH Slot7 PCI-E 3.0 X1
-│     │  │  ├─ Slot7 ASPM Support → Auto
+│     │  │  ├─ Slot7 ASPM Support → L1
 │     │  │  ├─ Slot7 L1 Substates → L1.1 & L1.2
 │     │  │  ├─ PTM → Enabled
 │     │  │  ├─ DPC → Enabled
 │     │  │  ├─ EDPC → Enabled
-│     │  │  └─ Slot7 PCIe Speed → Auto
+│     │  │  └─ Slot7 PCIe Speed → Gen3
 │     │  ├─ PCI-E M.2-M2
-│     │  │  ├─ M.2-M2 ASPM Support → Auto
+│     │  │  ├─ M.2-M2 ASPM Support → L1
 │     │  │  ├─ M.2-M2 L1 Substates → L1.1 & L1.2
 │     │  │  ├─ PTM → Enabled
 │     │  │  ├─ DPC → Enabled
 │     │  │  ├─ EDPC → Enabled
-│     │  │  └─ M.2-M2 PCIe Speed → Auto
+│     │  │  └─ M.2-M2 PCIe Speed → Gen3
 │     │  └─ PCH Slot2 PCI-E 3.0 X4/PCI-E M.2-M1
-│     │     ├─ Slot2/M.2-M1 ASPM Support → Auto
+│     │     ├─ Slot2/M.2-M1 ASPM Support → L1
 │     │     ├─ Slot2/M.2-M1 L1 Substates → L1.1 & L1.2
 │     │     ├─ PTM → Enabled
 │     │     ├─ DPC → Enabled
@@ -127,7 +126,7 @@ Advanced
 │
 ├─ NCT6796D Super IO Configuration
 │  └─ Serial Port 1 Configuration
-│     ├─ Serial Port 1 → Enabled
+│     ├─ Serial Port 1 → Disabled
 │     ├─ Device Settings = IO=3F8h; IRQ=4;
 │     └─ Change Settings → Auto
 |
@@ -154,29 +153,29 @@ Advanced
 │  ├─ SATA Controller(s) → Enabled
 │  ├─ SATA Mode Selection → AHCI
 │  ├─ Aggressive LPM Support → Enabled
-│  ├─ Storage Option ROM/UEFI Driver → Legacy
+│  ├─ Storage Option ROM/UEFI Driver → Disabled
 │  ├─ Serial ATA Port 0
-│  ├─ Hot Plug → Enabled
+│  ├─ Hot Plug → Disabled
 │  ├─ Spin Up Device → Disabled
 │  └─ SATA Device Type → Solid State Drive
 │
 ├─ PCH-FW Configuration
 │  ├─ ME FW Image Re-Flash → Disabled
-│  └─ TPM Device Selection → dTPM
+│  └─ TPM Device Selection → Disabled
 |
 ├─ ACPI Settings
 │  ├─ ACPI Sleep State → S3(Suspend to RAM)
 │  ├─ WHEA Support → Enabled
 │  ├─ High Precision Event Timer → Enabled
 │  ├─ Native PCIE Enable → Enabled
-│  ├─ Native ASPM → Disabled
-│  └─ Wake System From S5 → Disabled
+│  ├─ Native ASPM → Enabled
+│  └─ Wake System From S5 → Enabled
 |
 ├─ USB Configuration
 │  ├─ Legacy USB Support → Enabled
 │  ├─ XHCI Hand-off → Enabled
 │  ├─ USB Mass Storage Driver Support → Enabled
-│  └─ Port 60/64 Emulation → Enabled
+│  └─ Port 60/64 Emulation → Disabled
 |
 ├─ PCIe/PCI/PnP Configuration
 |  |  Option ROM execution
@@ -186,13 +185,13 @@ Advanced
 │  ├─ SR-IOV Support → Enabled
 │  ├─ BME DMA Mitigation → Disabled
 │  ├─ Onboard Video Option ROM → EFI
-│  ├─ NVMe Firmware Source → AMI Native Support
-│  ├─ Consistent Device Name Support → Disabled
+│  ├─ NVMe Firmware Source → Native
+│  ├─ Consistent Device Name Support → Enabled
 |  |  PCIe/PCI/PnP Configuration
 │  ├─ Slot1 PCI 33MHZ OPROM → Disabled
 │  ├─ Slot2 PCI-E 3.0 X4 OPROM → EFI
 │  ├─ CPU Slot4 PCI-E 3.0 X8(IN x16) OPROM → Disabled
-│  ├─ CPU Slot6 PCI-E 3.0 X16) OPROM → EFI
+│  ├─ CPU Slot6 PCI-E 3.0 X16 OPROM → EFI
 │  ├─ PCH Slot7 PCI-E 3.0 X1 OPROM → Disabled
 │  ├─ PCI-E M.2-M1 OPROM → Disabled
 │  ├─ PCI-E M.2-M2 OPROM → Disabled
@@ -218,8 +217,8 @@ Event Logs
    ├─ When Log is Full → Do Nothing
    |  SMBIOS Event Log Standard Settings
    ├─ Log System Boot Event → Disabled
-   ├─ MECI → 1
-   └─ METW → 60
+   ├─ MECI → 60
+   └─ METW → 5
 
 IPMI
 ├─ System Event Log
