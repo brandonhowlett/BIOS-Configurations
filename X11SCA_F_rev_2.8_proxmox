@@ -179,67 +179,47 @@ Advanced
 │  └─ Port 60/64 Emulation → Enabled
 |
 ├─ PCIe/PCI/PnP Configuration
-│  │  PCI Devices Common Settings:
-│  ├─ PCI PERR/SERR Support → Enabled
+|  |  Option ROM execution
+│  ├─ Video → UEFI
+│  ├─ PCI PERR/SERR Support → Disabled
 │  ├─ Above 4G Decoding → Enabled
 │  ├─ SR-IOV Support → Enabled
 │  ├─ BME DMA Mitigation → Disabled
-│  ├─ NVMe Firmware Source → Vendor Defined Firmware
-│  │
-│  ├─ PCH Slot4 PCI-E 3.0 X4(IN X8) OPROM → Disabled
-│  ├─ CPU Slot5 PCI-E 3.0 X8 OPROM → Disabled
-│  ├─ CPU Slot6 PCI-E 3.0 X8(IN x16) OPROM → Disabled
-│  │
-│  ├─ Onboard LAN Option ROM Type → EFI
 │  ├─ Onboard Video Option ROM → EFI
+│  ├─ NVMe Firmware Source → AMI Native Support
+│  ├─ Consistent Device Name Support → Disabled
+|  |  PCIe/PCI/PnP Configuration
+│  ├─ Slot1 PCI 33MHZ OPROM → Disabled
+│  ├─ Slot2 PCI-E 3.0 X4 OPROM → EFI
+│  ├─ CPU Slot4 PCI-E 3.0 X8(IN x16) OPROM → Disabled
+│  ├─ CPU Slot6 PCI-E 3.0 X16) OPROM → EFI
+│  ├─ PCH Slot7 PCI-E 3.0 X1 OPROM → Disabled
+│  ├─ PCI-E M.2-M1 OPROM → Disabled
+│  ├─ PCI-E M.2-M2 OPROM → Disabled
+│  ├─ Onboard LAN1 SUPPORT → Enabled
+│  ├─ Onboard LAN Option ROM Type → EFI
 │  └─ Network Stack → Disabled
 │
-
+├─ HTTP Boot Configuration
+│  ├─ HTTP Boot One Time → Disabled
+│  ├─ Input the description → 
+│  └─ Boot URI → 
 │
-├─ Super IO Configuration
-|  |  Super IO Chip = AST2400
-│  ├─ Serial Port 1
-│  │  └─ Serial Port 1 → Disabled
-│  ├─ Serial Port 2
-│  │  └─ Serial Port 2 → Disabled
-│  └─ Serial Port 2 Attribute → COM
-│
-├─ Intel Server Platform Services
-│
-├─ Serial Port Console Redirection
-│  └─ EMS Console Redirection → Disabled
-│
-
-│
-├─ Trusted Computing
-│  └─ Configuration
-│     └─ Security Device Support → Disable
-│
-├─ Intel I210 Gigabit  Network Connection - 00:00:00:00:00:00
-│  └─ NIC Configuration
-│     ├─ Link SPeed → Auto Negotiated
-│     └─ Wake On LAN → Enabled
-├─ Intel I210 Gigabit  Network Connection - 00:00:00:00:00:01
-│  └─ NIC Configuration
-│     ├─ Link SPeed → Auto Negotiated
-│     └─ Wake On LAN → Disabled
-│
-└─ iSCSI Configuration
-   └─ iSCSI Boot → Disabled
+├─ Network Configuration
+|
+└─ Network Stack Configuration
 
 Event Logs
 └─ Change SMBIOS Event Log Settings
    |  Enabling/Disabling Options
    ├─ SMBIOS Event Log → Enabled
-   |
    |  Erasing Settings
    ├─ Erase Event Log → No
    ├─ When Log is Full → Do Nothing
-   |
    |  SMBIOS Event Log Standard Settings
-   ├─ Log System Boot Event → Enabled
-   ├─ MECI → 60
-   └─ METW → 5
+   ├─ Log System Boot Event → Disabled
+   ├─ MECI → 1
+   └─ METW → 60
 
 IPMI
 ├─ System Event Log
@@ -247,24 +227,25 @@ IPMI
   └─ Update IPMI LAN Configuration → No
 
 Security
-├─ Password Check → Setup
-├─ Administrator Password
-│
+├─ Minimum length → 3
+├─ Maximum length → 20
+│  Administrator Password -Not Installed
+├─ Password Check
+├─ Hard Drive Security Frozen → Disabled
+├─ HDD Security Configuration
 └─ Secure Boot
-  ├─ Secure Boot Control → Disabled
-  └─ CSM Support → Disabled
 
 Boot
-├─ Setup Promp Timeout → 2
-│
+│  Boot Configuration
+├─ Setup Prompt Timeout → 1
 ├─ Boot Mode Select → UEFI
-│
-├─ Boot Option #1 → UEFI Hard Disk:UEFI OS
-├─ Boot Option #2-8 → Disabled
-│
-├─ UEFI Hard Disk Drive BBS Priorities → Disabled
-│  └─ UEFI Boot Order #1 → UEFI OS
-├─ UEFI USB Key Drive BBS Priorities
-│  └─ UEFI Boot Order #1 → Disabled  # For Unraid, UEFI: SanDisk'Cruizer Fit, Partition 1
-└─ UEFI Application Boot Priorities → Disabled
-   └─ UEFI Boot Order #1 → Disabled
+│  FIXED BOOT ORDER Priorities
+├─ UEFI Boot Option #1 → UEFI USB Key
+├─ UEFI Boot Option #2 → UEFI USB Hard Disk
+├─ UEFI Boot Option #3 → UEFI Hard Disk:Linux Boot Manager
+├─ Boot Option #4-9 → Disabled
+|
+├─ UEFI Hard Disk Drive BBS Priorities
+│  └─ Boot Order #1 → Linux Boot Manager(SATA,Port:3)
+└─ UEFI Application Boot Priorities
+   └─ Boot Order #1 → UEFI: Built-in EFI Shell
