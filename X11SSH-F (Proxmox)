@@ -1,5 +1,5 @@
 Main
-├─ BIOS Version → 3.6 <== IMPORTANT!
+├─ BIOS Version = 3.6 <== IMPORTANT!
 
 Advanced
 ├─ Boot Feature
@@ -8,14 +8,14 @@ Advanced
 │  ├─ AddOn ROM Display Mode → Keep Current
 │  ├─ Bootup NumLock State → Off
 │  ├─ Wait For F1 If Error → Disabled
-│  ├─ INT19 Trap Response → [Immediate,Postponed]
-│  ├─ Re-try Boot → [Disabled,Legacy Boot, EFI Boot]
+│  ├─ INT19 Trap Response → Immediate
+│  ├─ Re-try Boot → Disabled
 │  ├─ Install Windows 7 USB Support → Disabled
 │  │
 │  |  Power Configuration
 │  ├─ Watch Dog Function → Disabled
 │  ├─ Power Button Function → 4 Second Override
-│  └─ Restore on AC Power Loss → Last State
+│  └─ Restore on AC Power Loss → Power On
 │
 ├─ CPU Configuration
 │  ├─ Hyper-threading → Enabled
@@ -51,9 +51,7 @@ Advanced
 ├─ Chipset Configuration
 │  ├─ System Agent (SA) Configuration
 │  │  ├─ VT-d → Enabled
-│  │  ├─ SW Guard Extensions (SGX) → Enabled
-│  │  ├─ Select Owner EPOCH Input Type → [No Change in Owner EPOCHs, Change to New Random Owner EPOCHs, Manual User Defined Owner EPOCHs]
-│  │  ├─ PRMRR Size → Auto
+│  │  ├─ SW Guard Extensions (SGX) → Disabled
 │  │  ├─ X2APIC Opt Out → Disabled
 │  │  │
 │  │  ├─ Graphics Configuration
@@ -88,7 +86,7 @@ Advanced
 │  │  │  │  └─ Slot6 Limit Scale → 1.0x
 │  │  │  │
 │  │  │  ├─ CPU Slot5 PCI-E 3.0 x8
-│  │  │  │  ├─ Slot5 Bifurcation Auto
+│  │  │  │  ├─ Slot5 Bifurcation → 4x4x
 │  │  │  │  ├─ Slot5 Max Link Speed → Gen3
 │  │  │  │  ├─ Slot5 Max Payload Size → 256 TLP
 │  │  │  │  ├─ Slot5 ASPM Support → ASPM L1
@@ -144,9 +142,9 @@ Advanced
 │  ├─ BME DMA Mitigation → Disabled
 │  ├─ NVMe Firmware Source → Vendor Defined Firmware
 │  │
-│  ├─ PCH Slot4 PCI-E 3.0 X4(IN X8) OPROM → EFI
-│  ├─ CPU Slot5 PCI-E 3.0 X8 OPROM → EFI
-│  ├─ CPU Slot6 PCI-E 3.0 X8(IN x16) OPROM → EFI
+│  ├─ PCH Slot4 PCI-E 3.0 X4(IN X8) OPROM → Disabled
+│  ├─ CPU Slot5 PCI-E 3.0 X8 OPROM → Disabled
+│  ├─ CPU Slot6 PCI-E 3.0 X8(IN x16) OPROM → Disabled
 │  │
 │  ├─ Onboard LAN Option ROM Type → EFI
 │  ├─ Onboard Video Option ROM → EFI
@@ -168,8 +166,7 @@ Advanced
 ├─ Intel Server Platform Services
 │
 ├─ Serial Port Console Redirection
-│  ├─ EMS Console Redirection → Disabled
-│  └─ EMS Console Redirection Settings
+│  └─ EMS Console Redirection → Disabled
 │
 ├─ ACPI Settings
 │  ├─ High Precision Event Timer → Enabled
@@ -186,7 +183,7 @@ Advanced
 ├─ Intel I210 Gigabit  Network Connection - 00:00:00:00:00:01
 │  └─ NIC Configuration
 │     ├─ Link SPeed → Auto Negotiated
-│     └─ Wake On LAN → Enabled
+│     └─ Wake On LAN → Disabled
 │
 └─ iSCSI Configuration
    └─ iSCSI Boot → Disabled
@@ -208,28 +205,27 @@ Event Logs
 IPMI
 ├─ System Event Log
 └─ BMC Network Configuration
-  └─ Update IPMI LAN Configuration
+  └─ Update IPMI LAN Configuration → No
 
 Security
-├─ Password Check
+├─ Password Check → Setup
 ├─ Administrator Password
 │
 └─ Secure Boot
-  ├─ Secure Boot Control
-  ├─ CSM Support
-  └─ Key Managment
+  ├─ Secure Boot Control → Disabled
+  └─ CSM Support → Disabled
 
 Boot
-├─ Setup Promp Timeout
+├─ Setup Promp Timeout → 2
 │
 ├─ Boot Mode Select → UEFI
 │
-├─ Boot Option #1 → UEFI USB (Unraid)
-├─ Boot Option #2 - #8 → Disabled
+├─ Boot Option #1 → UEFI Hard Disk:UEFI OS
+├─ Boot Option #2-8 → Disabled
 │
 ├─ UEFI Hard Disk Drive BBS Priorities → Disabled
 │  └─ UEFI Boot Order #1 → UEFI OS
 ├─ UEFI USB Key Drive BBS Priorities
-│  └─ UEFI Boot Order #1 → UEFI: SanDisk'Cruizer Fit, Partition 1
+│  └─ UEFI Boot Order #1 → Disabled  # For Unraid, UEFI: SanDisk'Cruizer Fit, Partition 1
 └─ UEFI Application Boot Priorities → Disabled
    └─ UEFI Boot Order #1 → Disabled
