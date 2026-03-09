@@ -39,6 +39,13 @@ Advanced
 │  ├─ 5-Core Ratio Limit Override → 47
 │  ├─ 6-Core Ratio Limit Override → 46
 │  ├─ C-States → Enabled
+│  ├─ Enhanced C-States → Enabled
+│  ├─ C-State Auto Demotion → C1 and C3
+│  ├─ C-State Un-Demotion → C1 and C3
+│  ├─ Package C-State Demotion → Enabled
+│  ├─ Package C-State Un-Demotion → Enabled
+│  ├─ C-State Pre-Wake → Disabled
+│  ├─ Package C-State Limit → C7s
 │  └─ Monitor/Mwait → Enabled
 │
 ├─ Chipset Configuration
@@ -126,16 +133,14 @@ Advanced
 │
 ├─ NCT6796D Super IO Configuration
 │  └─ Serial Port 1 Configuration
-│     ├─ Serial Port 1 → Disabled
-│     ├─ Device Settings = IO=3F8h; IRQ=4;
-│     └─ Change Settings → Auto
+│     └─ Serial Port 1 → Disabled
 |
 ├─ AST2500SEC Super IO Configuration
 │  └─ SOL Controller → Enabled
 │     ├─ Serial Port → Enabled
 │     ├─ Device Settings = IO=248h; IRQ=10;
 │     └─ Change Settings → Auto
-
+|
 ├─ Serial Port Console Redirection
 |  |  COM1
 │  ├─ COM1 Console Redirection → Disabled
@@ -153,7 +158,7 @@ Advanced
 │  ├─ SATA Controller(s) → Enabled
 │  ├─ SATA Mode Selection → AHCI
 │  ├─ Aggressive LPM Support → Enabled
-│  ├─ Storage Option ROM/UEFI Driver → Disabled
+│  ├─ Storage Option ROM/UEFI Driver → Do not launch
 │  ├─ Serial ATA Port 0
 │  ├─ Hot Plug → Disabled
 │  ├─ Spin Up Device → Disabled
@@ -161,7 +166,7 @@ Advanced
 │
 ├─ PCH-FW Configuration
 │  ├─ ME FW Image Re-Flash → Disabled
-│  └─ TPM Device Selection → Disabled
+│  └─ TPM Device Selection → [dTPM,PTT]
 |
 ├─ ACPI Settings
 │  ├─ ACPI Sleep State → S3(Suspend to RAM)
@@ -169,7 +174,10 @@ Advanced
 │  ├─ High Precision Event Timer → Enabled
 │  ├─ Native PCIE Enable → Enabled
 │  ├─ Native ASPM → Enabled
-│  └─ Wake System From S5 → Enabled
+│  ├─ Wake System From S5 → Enabled
+│  ├─ Wake up hour → 0
+│  ├─ Wake up minute → 0
+│  └─ Wake up second → 0
 |
 ├─ USB Configuration
 │  ├─ Legacy USB Support → Enabled
