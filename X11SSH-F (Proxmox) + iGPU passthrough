@@ -63,12 +63,12 @@ Advanced
 │  │  │  ├─ Internal Graphics → Enabled
 │  │  │  ├─ GTT Size → 2MB
 │  │  │  ├─ Aperture Size → 256MB
-│  │  │  ├─ DVMT Pre-Allocated → 32MB
-│  │  │  ├─ DVMT Total Graphics Memory → 128MB
-│  │  │  ├─ IGFX Low Power Mode → Enabled
-│  │  │  ├─ PM Support → Enabled
+│  │  │  ├─ DVMT Pre-Allocated → 64MB
+│  │  │  ├─ DVMT Total Graphics Memory → MAX
+│  │  │  ├─ IGFX Low Power Mode → Disabled
+│  │  │  ├─ PM Support → Disabled
 │  │  │  ├─ PAVP Enable → Disabled
-│  │  │  └─ Hyper-V DDA → Disabled
+│  │  │  └─ Hyper-V DDA → Enabled
 │  │  │
 │  │  ├─ DMI / OPI Configuration
 │  │  │  ├─ DMI VC1 Control → Enabled
