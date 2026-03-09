@@ -1,0 +1,231 @@
+Main
+├─ BIOS Version = 3.6 <== IMPORTANT!
+
+Advanced
+├─ Boot Feature
+│  ├─ Quiet Boot → Disabled
+│  │
+│  ├─ AddOn ROM Display Mode → Keep Current
+│  ├─ Bootup NumLock State → Off
+│  ├─ Wait For F1 If Error → Disabled
+│  ├─ INT19 Trap Response → Immediate
+│  ├─ Re-try Boot → Disabled
+│  ├─ Install Windows 7 USB Support → Disabled
+│  │
+│  |  Power Configuration
+│  ├─ Watch Dog Function → Disabled
+│  ├─ Power Button Function → 4 Second Override
+│  └─ Restore on AC Power Loss → Power On
+│
+├─ CPU Configuration
+│  ├─ Hyper-threading → Enabled
+│  ├─ Active Processor Cores → All
+│  ├─ Execute Disable Bit → Enabled
+│  ├─ Intel Virtualization Technology → Enabled
+│  ├─ Hardware Prefetcher → Enabled
+│  ├─ Adjacent Cache Line Prefetch → Enabled
+│  ├─ CPU AES → Enabled
+│  ├─ Boot Performance Mode → Power Saving
+│  ├─ Hardware P-States (HWP) → Enabled
+│  ├─ Intel SpeedStep → Enabled
+│  │  ├─ Turbo Mode → Enabled
+│  │  ├─ Package Power Limit MSR Lock → Disabled
+│  │  ├─ Power Limit 1 Override → Disabled
+│  │  ├─ Power Limit 2 Override → Disabled
+│  │  ├─ 1-Core Ratio Limit Override → 0
+│  │  ├─ 2-Core Ratio Limit Override → 0
+│  │  ├─ 3-Core Ratio Limit Override → 0
+│  │  └─ 4-Core Ratio Limit Override → 0
+│  ├─ CPU C-States → Enabled
+│  │  ├─ Enhanced C-States → Enabled
+│  │  ├─ C-State Auto Demotion → C1 and C3
+│  │  ├─ C-State Un-Demotion → C1 and C3
+│  │  ├─ Package C-State Demotion → Enabled
+│  │  └─ Package C-State Un-Demotion → Enabled
+│  ├─ C-State Pre-Wake → Disabled
+│  ├─ Package C-State Limit → C7s
+│  └─ CPU Thermal Configuration
+│     ├─ CPU DTS → Enabled
+│     └─ ACPI 3.0 T-States → Disabled
+│
+├─ Chipset Configuration
+│  ├─ System Agent (SA) Configuration
+│  │  ├─ VT-d → Enabled
+│  │  ├─ SW Guard Extensions (SGX) → Disabled
+│  │  ├─ X2APIC Opt Out → Disabled
+│  │  │
+│  │  ├─ Graphics Configuration
+│  │  │  ├─ Graphics Turbo IMON Current → 14
+│  │  │  │
+│  │  │  ├─ Primary Display → PCIE
+│  │  │  │  ├─ Primary PEG → CPU SLOT6 PCI-E 3.0 X8(IN X16)
+│  │  │  │  └─ Primary PCIE  → Onboard
+│  │  │  ├─ Internal Graphics → Enabled
+│  │  │  ├─ GTT Size → 2MB
+│  │  │  ├─ Aperture Size → 256MB
+│  │  │  ├─ DVMT Pre-Allocated → 32MB
+│  │  │  ├─ DVMT Total Graphics Memory → 128MB
+│  │  │  ├─ IGFX Low Power Mode → Enabled
+│  │  │  ├─ PM Support → Enabled
+│  │  │  ├─ PAVP Enable → Disabled
+│  │  │  └─ Hyper-V DDA → Disabled
+│  │  │
+│  │  ├─ DMI / OPI Configuration
+│  │  │  ├─ DMI VC1 Control → Enabled
+│  │  │  ├─ DMI VCm Control → Enabled
+│  │  │  ├─ CPU DMI Link ASPM Control → L1
+│  │  │  ├─ DMI Extended Sync Control → Enabled
+│  │  │  └─ DMI De-Emphasis Control → -6 dB
+│  │  │
+│  │  ├─ PEG Port Configuration
+│  │  │  ├─ CPU Slot6 PCI-E 3.0 x8 (in x16)
+│  │  │  │  ├─ Slot6 Max Link Speed → Gen3
+│  │  │  │  ├─ Slot6 Max Payload Size → 256 TLP
+│  │  │  │  ├─ Slot6 ASPM Support → ASPM L1
+│  │  │  │  ├─ Slot6 Power Limit Value 75
+│  │  │  │  └─ Slot6 Limit Scale → 1.0x
+│  │  │  │
+│  │  │  ├─ CPU Slot5 PCI-E 3.0 x8
+│  │  │  │  ├─ Slot5 Bifurcation → 4x4x
+│  │  │  │  ├─ Slot5 Max Link Speed → Gen3
+│  │  │  │  ├─ Slot5 Max Payload Size → 256 TLP
+│  │  │  │  ├─ Slot5 ASPM Support → ASPM L1
+│  │  │  │  ├─ Slot5 Power Limit Value 75
+│  │  │  │  └─ Slot5 Limit Scale → 1.0x
+│  │  │  │
+│  │  │  └─ Program PCIe ASPM After OPROM → Enabled
+│  │  │
+│  │  ├─ Memory Configuration
+│  │  │  ├─ Maximum Memory Frequency → Auto
+│  │  │  ├─ Max TOLUD → Dynamic
+│  │  │  ├─ Energy Performance Gain → Enabled
+│  │  │  ├─ Memory Scrambler → Enabled
+│  │  │  ├─ Fast Boot → Disabled
+│  │  │  ├─ REFRESH_2X_MODE → Disabled
+│  │  │  └─ Closed Loop Thermal Management → Enabled
+│  │  │
+│  │  └─ GT Power Management Control
+│  │     └─ RC6(Render Standby) → Enabled
+│  │
+│  └─ PCH-IO Configuration
+│     ├─ PCI Express Configuration
+│     │  ├─ PCH DMI Link ASPM Control → Enabled
+│     │  ├─ Peer Memory Write Enable → Disabled
+│     │  │
+│     │  ├─ PCI-E 3.0 M.2
+│     │  │  ├─ PCI-E 3.0 M.2 ASPM Support → L1
+│     │  │  ├─ PCI-E 3.0 M.2 L1 Substates → L1.1 & L1.2
+│     │  │  └─ PCI-E 3.0 M.2 PCIe Speed → Gen3
+│     │  └─ PCH Slot4 PCI-E 3.0 X4(IN X8)
+│     │     ├─ Slot4 ASPM Support → L1
+│     │     ├─ Slot4 L1 Substates → L1.1 & L1.2
+│     │     └─ Slot4 PCIe Speed → Gen3
+│     ├─ Port 61h Bit-4 Emulation → Disabled
+│     └─ PCIe PLL SSC → Enabled
+│
+├─ SATA Configuration
+│  ├─ SATA Controller → Enabled
+│  ├─ SATA Mode Selection → AHCI
+│  ├─ SATA Frozen → Disabled
+│  ├─ Aggressive LPM Support → Enabled
+│  │
+│  └─ Serial ATA Port 0
+│     ├─ Port 0 Hot Plug → Disabled
+│     ├─ Port 0 Spin Up Device → Disabled
+│     └─ Port 0 SATA Device Type → Solid State Drive
+│
+├─ PCIe/PCI/PnP Configuration
+│  │  PCI Devices Common Settings:
+│  ├─ PCI PERR/SERR Support → Enabled
+│  ├─ Above 4G Decoding → Enabled
+│  ├─ SR-IOV Support → Enabled
+│  ├─ BME DMA Mitigation → Disabled
+│  ├─ NVMe Firmware Source → Vendor Defined Firmware
+│  │
+│  ├─ PCH Slot4 PCI-E 3.0 X4(IN X8) OPROM → Disabled
+│  ├─ CPU Slot5 PCI-E 3.0 X8 OPROM → Disabled
+│  ├─ CPU Slot6 PCI-E 3.0 X8(IN x16) OPROM → Disabled
+│  │
+│  ├─ Onboard LAN Option ROM Type → EFI
+│  ├─ Onboard Video Option ROM → EFI
+│  └─ Network Stack → Disabled
+│
+├─ USB Configuration
+│  ├─ Legacy USB Support → Enabled
+│  ├─ XHCI Hand-off → Enabled
+│  └─ Port 60/64 Emulation → Disabled
+│
+├─ Super IO Configuration
+|  |  Super IO Chip = AST2400
+│  ├─ Serial Port 1
+│  │  └─ Serial Port 1 → Disabled
+│  ├─ Serial Port 2
+│  │  └─ Serial Port 2 → Disabled
+│  └─ Serial Port 2 Attribute → COM
+│
+├─ Intel Server Platform Services
+│
+├─ Serial Port Console Redirection
+│  └─ EMS Console Redirection → Disabled
+│
+├─ ACPI Settings
+│  ├─ High Precision Event Timer → Enabled
+│  └─ WHEA Support → Enabled
+│
+├─ Trusted Computing
+│  └─ Configuration
+│     └─ Security Device Support → Disable
+│
+├─ Intel I210 Gigabit  Network Connection - 00:00:00:00:00:00
+│  └─ NIC Configuration
+│     ├─ Link SPeed → Auto Negotiated
+│     └─ Wake On LAN → Enabled
+├─ Intel I210 Gigabit  Network Connection - 00:00:00:00:00:01
+│  └─ NIC Configuration
+│     ├─ Link SPeed → Auto Negotiated
+│     └─ Wake On LAN → Disabled
+│
+└─ iSCSI Configuration
+   └─ iSCSI Boot → Disabled
+
+Event Logs
+└─ Change SMBIOS Event Log Settings
+   |  Enabling/Disabling Options
+   ├─ SMBIOS Event Log → Enabled
+   |
+   |  Erasing Settings
+   ├─ Erase Event Log → No
+   ├─ When Log is Full → Do Nothing
+   |
+   |  SMBIOS Event Log Standard Settings
+   ├─ Log System Boot Event → Enabled
+   ├─ MECI → 60
+   └─ METW → 5
+
+IPMI
+├─ System Event Log
+└─ BMC Network Configuration
+  └─ Update IPMI LAN Configuration → No
+
+Security
+├─ Password Check → Setup
+├─ Administrator Password
+│
+└─ Secure Boot
+  ├─ Secure Boot Control → Disabled
+  └─ CSM Support → Disabled
+
+Boot
+├─ Setup Promp Timeout → 2
+│
+├─ Boot Mode Select → UEFI
+│
+├─ Boot Option #1 → UEFI Hard Disk:UEFI OS
+├─ Boot Option #2-8 → Disabled
+│
+├─ UEFI Hard Disk Drive BBS Priorities → Disabled
+│  └─ UEFI Boot Order #1 → UEFI OS
+├─ UEFI USB Key Drive BBS Priorities
+│  └─ UEFI Boot Order #1 → Disabled  # For Unraid, UEFI: SanDisk'Cruizer Fit, Partition 1
+└─ UEFI Application Boot Priorities → Disabled
+   └─ UEFI Boot Order #1 → Disabled
